@@ -36,14 +36,21 @@ body{
 .grid-container {  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr 0.8fr 1fr 1.5fr;
+   /* grid-template-rows: 0.5fr 0.5fr 0.8fr 1fr 1.5fr;*/
+   grid-template-rows: 0.5fr 0.5fr 0.8fr 1.5fr;
     gap: 12px 12px;
     grid-auto-flow: row dense;
-    grid-template-areas:
+   /* grid-template-areas:
       "datetime datetime current current current current empty1 empty1"
       "datetime datetime current current current current wind wind"
       "empty2 daynight current current current current wind wind"
       "hourly hourly hourly hourly hourly hourly hourly hourly"
+      "dayly dayly dayly dayly dayly dayly dayly dayly";*/
+      grid-template-areas:
+      "datetime datetime current current current current empty1 empty1"
+      "datetime datetime current current current current wind wind"
+      "empty2 daynight current current current current wind wind"
+     
       "dayly dayly dayly dayly dayly dayly dayly dayly";
    /* height: 80vh;*/
     padding: 12px;
@@ -306,13 +313,18 @@ color:var(--main-color) }
         grid-template-rows: 1fr 0.6fr 1fr 0.5fr 1fr;
         gap: 12px 12px;
         grid-auto-flow: row dense;
+        /*
         grid-template-areas:
           "datetime datetime current current"
           "empty1 empty1 daynight daynight"
           "wind wind empty2 empty2"
           "hourly hourly hourly hourly"
+          "dayly dayly dayly dayly";*/
+         grid-template-areas:
+          "datetime datetime current current"
+          "empty1 empty1 daynight daynight"
+          "wind wind empty2 empty2"
           "dayly dayly dayly dayly";
-        
         /*height: 80vh;*/
         padding: 12px;
         width : 100%;
@@ -324,17 +336,23 @@ color:var(--main-color) }
 @media all and (max-width:450px){
     .grid-container {  display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.8fr 1fr 0.5fr 1fr 0.5fr 1fr;
+       /* grid-template-rows: 0.8fr 1fr 0.5fr 1fr 0.5fr 1fr;*/
+       grid-template-rows: 0.8fr 1fr 0.5fr 1fr 1fr;
         gap: 12px 12px;
         grid-auto-flow: row dense;
-        grid-template-areas:
+        /*grid-template-areas:
           "datetime datetime" 
           "current current"
           "empty1 daynight"
           "wind empty2"
           "hourly hourly"
+          "dayly dayly";*/
+        grid-template-areas:
+          "datetime datetime" 
+          "current current"
+          "empty1 daynight"
+          "wind empty2"
           "dayly dayly";
-        
         /*height: 80vh;*/
         padding: 12px;
         width : 100%;

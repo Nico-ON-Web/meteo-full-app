@@ -31,7 +31,7 @@ function callApi(lat,lon){
 		// sens du vent
 		drawWind(res.current)
 		//heure par heure
-		drawHourly(res.hourly)
+		//drawHourly(res.hourly)
 	})
 }
 // sun cloudy suncloud rain snow thunder 
